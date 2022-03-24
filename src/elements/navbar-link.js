@@ -77,7 +77,6 @@ function styles() {
 					left: 0;
 					top: 100%;
 					border-radius: ${RADIUS.round};
-					${exist(this.props.active) && `@include md-width;`}
 				}
 			}
 		}

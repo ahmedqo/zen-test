@@ -11,7 +11,6 @@ import "./glass";
 var Links = [
     { to: "/products", label: "products" },
     { to: "/orders", label: "orders" },
-    { to: "/quotes", label: "quotes" },
 ];
 
 var props = {

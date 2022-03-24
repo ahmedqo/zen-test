@@ -22,17 +22,17 @@ function styles() {
 }
 
 function mounted() {
-    useTitle("Home");
+    useTitle("Orders");
 }
 
 function render() {
     return html /*html*/ `
 		<zg-wrapper>
 			<header>
-				Home page.
+				Orders page.
 			</header>
 		</zg-wrapper>
 	`;
 }
 
-export default define("zg-home-view", Component({ mounted, styles, render }));
+export default define("zg-orders-view", Component({ mounted, styles, render }));

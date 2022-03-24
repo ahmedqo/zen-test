@@ -1,4 +1,4 @@
-import { NotFound, Login, Home } from "../pages";
+import { NotFound, Products, Orders, Login, Home } from "../pages";
 import Loader from "../elements/loader";
 import Header from "../elements/header";
 import Router from "zen/router";
@@ -18,9 +18,14 @@ export function useRoute(y) {
         .change((path) => {
             if (dom("zg-navbar").length) dom("zg-navbar")[0].current = path;
         });
-    if (y) Router.clean().add("/", Home, "home").header(create(Header));
+    if (y)
+        Router.clean()
+        .add("/", create(Home), "home")
+        .add("/orders/", create(Orders), "orders")
+        .add("/products/", create(Products), "products")
+        .header(create(Header));
     else Router.clean().add("/", create(Login), "home");
-    Router.add("/404", NotFound).init();
+    Router.add("/404", create(NotFound)).init();
 }
 
 export function useObject(o) {

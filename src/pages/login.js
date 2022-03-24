@@ -81,8 +81,11 @@ function styles() {
 	`;
 }
 
-function render() {
+function mounted() {
     useTitle("Login");
+}
+
+function render() {
     return html /*html*/ `
 		<zg-glass-wrapper blur=${2}>
 			<zg-wrapper>
@@ -95,4 +98,4 @@ function render() {
 	`;
 }
 
-export default define("zg-login", Component({ state, logic, styles, render }));
+export default define("zg-login-view", Component({ state, logic, mounted, styles, render }));
